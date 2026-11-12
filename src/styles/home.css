@@ -1,0 +1,81 @@
+.hero { position: relative; isolation: isolate; min-height: 740px; background: #090909; }
+.hero__image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 61% top; z-index: -2; }
+.hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, #090909 0%, rgb(9 9 9 / .98) 25%, rgb(9 9 9 / .65) 46%, transparent 75%); z-index: -1; }
+.hero__inner { padding-block: 300px 36px; }
+.hero .eyebrow { font-size: 10px; gap: 12px; letter-spacing: .13em; margin-bottom: 17px; }
+.hero .eyebrow::before { height: 20px; width: 3px; }
+.hero h1 { font-size: clamp(66px, 16vw, 100px); line-height: .9; letter-spacing: -.02em; margin-left: -3px; }
+.hero__description { max-width: 490px; font-size: 15px; line-height: 1.6; margin-top: 22px; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+.hero__actions .button { font-size: 13px; padding-inline: 16px; }
+.hero__stats { display: flex; gap: 30px; margin-top: 30px; }
+.hero__stats > div { display: flex; align-items: center; gap: 13px; }
+.hero__stats strong { font-family: var(--font-display); font-style: italic; font-weight: 900; font-size: 49px; line-height: 1; }
+.hero__stats span { border-left: 3px solid #ef0010; padding-left: 12px; line-height: 1.4; font-size: 12px; }
+.discipline-reveal { width: 80%; }
+.discipline-card { position: relative; display: block; height: 470px; overflow: hidden; background: #111; }
+.discipline-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 37%, rgb(9 9 9 / .8) 65%, #101010 90%); }
+.discipline-card img { width: 100%; height: 100%; object-position: center 12%; transition: transform .35s; }
+.discipline-card:hover img { transform: scale(1.035); }
+.discipline-card__content { position: absolute; z-index: 1; left: 22px; right: 22px; bottom: 26px; }
+.discipline-card h3 { font-size: 36px; white-space: nowrap; }
+.discipline-card .red-rule { width: 50px; height: 4px; margin: 18px 0 14px; }
+.discipline-card p { font-size: 15px; line-height: 1.5; min-height: 90px; }
+.school__grid { display: grid; gap: 34px; }
+.school__photos { display: flex; flex-direction: column; gap: 10px; }
+.school__main-photo { width: 100%; aspect-ratio: 1.08; object-position: center; }
+@media (min-width: 1024px) { .school .school__grid { align-items: stretch; } .school__photos { position: relative; min-height: 0; } .school__main-photo { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; object-fit: cover; } }
+.school .section-heading { margin-bottom: 22px; }
+.school h2, .plans > .container > div:first-child h2, .venues h2 { font-size: clamp(48px, 5.8vw, 96px); }
+.school__intro { color: #ddd; font-size: 16px; line-height: 1.6; }
+.school__attributes { margin: 28px 0; }
+.school__attributes li { display: flex; gap: 17px; align-items: start; padding-block: 20px; border-bottom: 1px solid #4d4d50; }
+.school__attributes li:first-child { padding-top: 0; }
+.school__attributes li:last-child { border-bottom: none; }
+.school__number { font-family: var(--font-display); font-style: italic; font-weight: 900; color: #a6a6a7; font-size: 45px; line-height: 1; min-width: 58px; border-right: 4px solid #f00012; padding-right: 17px; transform: skew(-5deg); }
+.school__attributes h3 { font-size: 26px; margin-bottom: 7px; }
+.school__attributes p { font-size: 14px; line-height: 1.5; color: #c9c9c9; }
+.plans__grid, .venues__grid { display: grid; gap: 24px; }
+.plan-card { position: relative; overflow: hidden; min-height: 440px; height: 100%; border: 1px solid #888; background: #111; isolation: isolate; }
+.plan-card--featured { border: 2px solid #ef0010; }
+.plan-card__photo { position: absolute; width: 100%; height: 100%; inset: 0; object-position: 66% center; z-index: -2; }
+.plan-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgb(5 5 5 / .97), rgb(5 5 5 / .78) 46%, rgb(5 5 5 / .06) 100%); z-index: -1; }
+.plan-card__content { padding: 28px 22px; }
+.plan-card__eyebrow { font-size: 12px; font-weight: 600; font-style: italic; letter-spacing: .15em; }
+.plan-card--featured .plan-card__eyebrow { color: #ff646c; }
+.plan-card h3 { font-size: 70px; margin-top: 12px; font-weight: 900; }
+.plan-card .red-rule { width: 52px; margin: 17px 0 24px; }
+.plan-card ul { display: grid; gap: 22px; max-width: 330px; }
+.plan-card li { display: flex; align-items: center; gap: 15px; font-size: 14px; line-height: 1.45; }
+.plan-card li svg { width: 26px; height: 26px; stroke-width: 1.5; }
+.plan-card .button { margin-top: 28px; padding-inline: 18px; width: min(100%, 330px); font-size: 13px; }
+.plans__help { border-top: 1px solid #454548; margin-top: 28px; padding-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
+.plans__help > svg { color: #ef0010; width: 42px; height: 42px; }
+.plans__help h3 { font-family: var(--font-sans); font-style: italic; font-size: 18px; text-transform: none; font-weight: 700; margin-bottom: 6px; }
+.plans__help p { color: #ccc; font-size: 14px; }
+.plans__help > div { flex: 1; min-width: 220px; }
+.venue-card { background: #111112; height: 100%; }
+.venue-card figure { position: relative; }
+.venue-card figure img { width: 100%; aspect-ratio: 2.25; }
+.venue-card figcaption { position: absolute; bottom: 9px; right: 12px; font-size: 10px; color: #ddd; padding: 3px 8px; background: rgb(0 0 0 / .7); }
+.venue-card__body { padding: 25px 22px; }
+.venue-card__heading { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+.venue-card__pin { color: #f00012; width: 40px; height: 48px; stroke-width: 1.8; }
+.venue-card__heading > div p { font-size: 12px; font-weight: 600; letter-spacing: .1em; font-style: italic; }
+.venue-card h3 { font-size: 38px; }
+.venue-card__address { flex-basis: 100%; font-size: 14px; line-height: 1.5; }
+.venue-card__note { border-top: 1px solid #37373b; padding-top: 18px; margin-top: 20px; font-size: 13px; color: #c4c4c5; }
+.venue-card__actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+.venue-card__actions .button { padding-inline: 12px; font-size: 13px; }
+@media (min-width: 640px) { .hero { min-height: 760px; } .hero__image { object-position: 62% top; } .hero__inner { padding-top: 310px; } .hero h1 { font-size: 100px; } .hero__description { max-width: 470px; } .discipline-reveal { width: 42%; } .plans__grid, .venues__grid { grid-template-columns: 1fr 1fr; gap: 20px; } .plan-card__content { padding-inline: 22px; } .plan-card h3 { font-size: 60px; } .plan-card li { font-size: 13px; gap: 12px; } .venue-card__actions { grid-template-columns: 1fr; } }
+@media (min-width: 1024px) { .hero { height: min(820px, calc(100svh - 88px)); min-height: 650px; } .hero__image { object-position: center center; } .hero::after { background: linear-gradient(90deg, rgb(0 0 0 / .1) 0%, transparent 58%); } .hero__inner { height: 100%; padding-block: 58px; display: flex; align-items: center; } .hero__content { width: 48%; } .hero .eyebrow { font-size: 11px; letter-spacing: .16em; margin-bottom: 23px; } .hero h1 { font-size: clamp(100px, 8.9vw, 148px); } .hero__description { margin-top: 23px; max-width: 490px; font-size: 18px; line-height: 1.5; } .hero__actions { margin-top: 30px; gap: 16px; } .hero__actions .button { font-size: 16px; min-height: 54px; padding-inline: 25px; } .hero__stats { margin-top: 42px; gap: 40px; } .hero__stats strong { font-size: 65px; } .hero__stats span { font-size: 16px; padding-left: 17px; } .discipline-reveal { width: 27%; } .discipline-card { height: 480px; } .school__grid { grid-template-columns: 1.08fr 1fr; gap: 56px; align-items: center; } .school__intro { font-size: 18px; } .school__attributes { margin-block: 30px; } .school__attributes h3 { font-size: 28px; } .school__attributes p { font-size: 15px; } .plan-card__content { padding: 30px 30px; } .plan-card h3 { font-size: 80px; } .plan-card li { font-size: 16px; } .plan-card li svg { width: 30px; height: 30px; } .plan-card { min-height: 440px; } .plan-card .button { font-size: 15px; } .plan-card__eyebrow { font-size: 14px; } .venue-card__body { padding: 28px; } .venue-card__actions { grid-template-columns: 1fr 1fr; } .plans__help { flex-wrap: nowrap; } .plans__help > div { border-left: 3px solid #ed0012; padding-left: 26px; } .plans__help > svg { width: 56px; height: 56px; } .plans__help h3 { font-size: 22px; } .plans__help p { font-size: 16px; } }
+@media (min-width: 1280px) { .discipline-track { overflow: visible; padding-bottom: 0; } .discipline-reveal { width: calc((100% - 64px) / 5); } .discipline-card { height: clamp(440px, 36vw, 540px); } .discipline-card h3 { font-size: clamp(32px, 2.6vw, 42px); } .discipline-card p { font-size: 16px; min-height: 96px; } .discipline-card__content { left: 23px; right: 20px; } .venue-card__heading { flex-wrap: nowrap; gap: 15px; } .venue-card__heading > div { min-width: 185px; } .venue-card__address { flex-basis: auto; border-left: 1px solid #707074; padding-left: 22px; margin-left: 8px; font-size: 14px; } }
+@media (max-width: 639px) { .school__content { display: contents; } .school__grid > .school__photos { grid-row: 3; } .school__grid .section-heading { margin-bottom: -12px; } .school__attributes { margin-block: 0; } .school .button { width: 100%; } .hero__image { height: 510px; object-fit: cover; object-position: 65% top; } .hero__actions .button { flex: 1; white-space: nowrap; } .venue-card__actions { gap: 8px; } .venue-card__actions .button { font-size: 12px; } }
+
+/* Fill the visible screen below the sticky navigation, while allowing content to grow on short screens. */
+.hero { height: auto; min-height: calc(100vh - var(--nav-height)); min-height: calc(100svh - var(--nav-height)); display: flex; }
+.hero__image { height: 100%; }
+.hero__inner { min-height: calc(100vh - var(--nav-height)); min-height: calc(100svh - var(--nav-height)); display: flex; align-items: flex-end; padding-block: clamp(220px, 32svh, 340px) 32px; }
+@media (min-width: 1024px) { .hero__inner { align-items: center; padding-block: 48px; } }
+@media (max-height: 700px) { .hero__inner { padding-top: 120px; } }
+@media (min-width: 1024px) and (max-height: 700px) { .hero__inner { padding-block: 32px; } .hero h1 { font-size: clamp(72px, 7vw, 110px); } .hero__stats { margin-top: 24px; } .hero__actions { margin-top: 20px; } }

@@ -1,0 +1,18 @@
+.pecos-select { display: inline-flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; padding: 10px 14px; border: 1px solid #737378; border-radius: 2px; background: #0d0d0e; color: #f4f4f4; font-family: var(--font-sans); font-size: 14px; line-height: 1.5; text-align: left; cursor: pointer; transition: border-color 180ms, background 180ms; }
+.pecos-select > span:first-of-type { flex: 1; }
+.pecos-select:hover { background: #171719; border-color: #bdbdbd; }
+.pecos-select[data-state='open'] { border-color: #e21c27; }
+.pecos-select[aria-invalid='true'] { border-color: #ff8589; }
+.pecos-select__chevron { display: inline-flex; color: #bdbdbd; transition: transform 180ms; }
+.pecos-select[data-state='open'] .pecos-select__chevron { transform: rotate(180deg); }
+.pecos-select-menu { z-index: 100; min-width: var(--radix-select-trigger-width); max-width: calc(100vw - 24px); max-height: min(340px, var(--radix-select-content-available-height)); overflow: hidden; border: 1px solid #55555a; border-radius: 2px; background: #171719; color: #f4f4f4; box-shadow: 0 12px 32px rgb(0 0 0 / .45); animation: pecos-select-enter 150ms ease-out; transform-origin: var(--radix-select-content-transform-origin); }
+.pecos-select-menu__viewport { padding: 5px; }
+.pecos-select-option { position: relative; display: flex; align-items: center; min-height: 44px; padding: 10px 40px 10px 12px; font-family: var(--font-sans); font-size: 14px; line-height: 1.5; cursor: pointer; outline: none; user-select: none; border-left: 2px solid transparent; }
+.pecos-select-option[data-state='checked'] { background: #29292d; border-left-color: #e21c27; }
+.pecos-select-option[data-highlighted] { background: #d71928; color: white; }
+.pecos-select-option__check { display: flex; position: absolute; right: 12px; }
+.pecos-select-menu__scroll { display: flex; align-items: center; justify-content: center; height: 28px; color: #bdbdbd; background: #171719; }
+.form-field .pecos-select { width: 100%; min-height: 48px; font-size: 16px; border-color: #89898d; }
+.form-field .pecos-select[aria-invalid='true'] { border-color: #ff8589; }
+@keyframes pecos-select-enter { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .pecos-select-menu { animation: none; } .pecos-select__chevron { transition: none; } }

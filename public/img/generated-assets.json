@@ -1,0 +1,68 @@
+[
+  {
+    "key": "ring",
+    "file": "sede-higuereta-demo.webp",
+    "generated": true,
+    "provisional": true
+  },
+  {
+    "key": "marsano",
+    "file": "sede-marsano-demo.webp",
+    "generated": true,
+    "provisional": true
+  },
+  {
+    "key": "vip",
+    "file": "membresia-vip-demo.webp",
+    "generated": true,
+    "provisional": true
+  },
+  {
+    "key": "super-vip",
+    "file": "membresia-super-vip-demo.webp",
+    "generated": true,
+    "provisional": true
+  },
+  {
+    "key": "gloves",
+    "file": "guantes-horarios-demo.webp",
+    "generated": true,
+    "provisional": true
+  },
+  {
+    "key": "trainer-boxeo",
+    "file": "entrenador-boxeo-demo.webp",
+    "generated": true,
+    "provisional": true
+  },
+  {
+    "key": "trainer-muay",
+    "file": "entrenador-muay-thai-demo.webp",
+    "generated": true,
+    "provisional": true
+  },
+  {
+    "key": "trainer-kick",
+    "file": "entrenador-kickboxing-demo.webp",
+    "generated": true,
+    "provisional": true
+  },
+  {
+    "key": "trainer-mma",
+    "file": "entrenador-mma-demo.webp",
+    "generated": true,
+    "provisional": true
+  },
+  {
+    "key": "trainer-jiujitsu",
+    "file": "entrenador-jiujitsu-demo.webp",
+    "generated": true,
+    "provisional": true
+  },
+  {
+    "key": "community",
+    "file": "comunidad-demo.webp",
+    "generated": true,
+    "provisional": true
+  }
+]
